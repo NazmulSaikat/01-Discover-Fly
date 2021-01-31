@@ -81,7 +81,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="ticket-sub-total">$0</p>
+                        <p id="firstClass-ticket-total">$0</p>
                     </div>
                 </div>
 
@@ -90,7 +90,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p id="vat">$0</p>
+                        <p id="economyClass-ticket-total">$0</p>
                     </div>
                 </div>
                 <hr>
@@ -116,8 +116,8 @@
             const firstClassTicketCount = parseInt(ticketInput.value);
             const ticketNewCount = firstClassTicketCount + 1;
             ticketInput.value = ticketNewCount;
-            var firstTicketTotal = ticketNewCount * 150;
-            document.getElementById('ticket-sub-total').innerText = '$' + firstTicketTotal;
+            const ticketTotal = ticketNewCount * 150;
+            document.getElementById('firstClass-ticket-total').innerText = '$' + ticketTotal;
          });
 
             document.getElementById('firstClass-ticket-decrease').addEventListener('click', function(){
@@ -125,8 +125,8 @@
             const firstClassTicketCount = parseInt(ticketInput.value);
             const ticketNewCount = firstClassTicketCount - 1;
             ticketInput.value = ticketNewCount;
-            const firstTicketDecrease = ticketNewCount * 150;
-            document.getElementById('ticket-sub-total').innerText = '$' + firstTicketDecrease;
+            const ticketTotal = ticketNewCount * 150;
+            document.getElementById('firstClass-ticket-total').innerText = '$' + ticketTotal;
             });
 
             
@@ -137,7 +137,7 @@
             const ticketNewCount = economyClassTicketCount + 1;
             ticketInput.value = ticketNewCount;
             const ticketTotal = ticketNewCount * 100;
-            document.getElementById('ticket-sub-total').innerText = '$' + ticketTotal;
+            document.getElementById('economyClass-ticket-total').innerText = '$' + ticketTotal;
          });
 
             document.getElementById('economyClass-ticket-decrease').addEventListener('click', function(){
@@ -145,13 +145,9 @@
             const economyClassTicketCount = parseInt(ticketInput.value);
             const ticketNewCount = economyClassTicketCount - 1;
             ticketInput.value = ticketNewCount;
-            var ticketTotal = ticketNewCount * 100;
-            document.getElementById('ticket-sub-total').innerText = '$' + ticketTotal;
+            const ticketTotal = ticketNewCount * 100;
+            document.getElementById('economyClass-ticket-total').innerText = '$' + ticketTotal;
             });
-
-            // function subTotal(){
-            //     const total = document.getElementById('ticket-sub-total').innerText
-            // }
         </script>
     </section>
 
