@@ -57,6 +57,10 @@ nav ul li a:hover, a.active{
 .booking-form  .input-group{
     margin: 10px 0;
 }
+.alignment{
+    text-align: center;
+    margin-top: 300px;
+}
 .f-class{
     display: flex;
     justify-content: space-between;
